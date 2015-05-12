@@ -59,6 +59,12 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="active">
+                        <a href="profile.php"><i class="fa fa-fw fa-file"></i> Profile</a>
+                    </li>
+                    <li>
+                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+                    </li>
                     
                 
                 </ul>
