@@ -131,3 +131,4 @@ if(isset($_POST['edit_user']) )
     <div class="form-group">
         <input class="btn btn-primary" type="submit" name="edit_user" value="Update User">
     </div>
+    
