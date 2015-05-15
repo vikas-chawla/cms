@@ -43,7 +43,6 @@
                         
                         echo "<div class='huge'>{$post_counts}</div>"
                     ?>
-                    
                         <div>Posts</div>
                     </div>
                 </div>
@@ -65,7 +64,13 @@
                         <i class="fa fa-comments fa-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                     <div class='huge'>23</div>
+                       <?php
+                        $query = "SELECT * FROM comments";
+                        $select_all_comments = mysqli_query($connection, $query);
+                        $post_comments = mysqli_num_rows($select_all_comments);
+                        
+                        echo "<div class='huge'>{$post_comments}</div>"
+                        ?>
                       <div>Comments</div>
                     </div>
                 </div>
