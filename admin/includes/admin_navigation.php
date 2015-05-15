@@ -32,8 +32,10 @@
                 <ul class="nav navbar-nav side-nav">
                         <li>
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>
+                        </li>
+                        <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
+                        </li>
                         <ul id="posts_dropdown" class="collapse">
                             <li>
                                 <a href="posts.php">View All Post</a>
