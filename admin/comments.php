@@ -14,7 +14,7 @@
                     <div class="col-lg-12">
 
                     <h1 class="page-header">
-                        All Post
+                        All Comments
                         <h4>Author</h4>
                     </h1>
                     <?php
