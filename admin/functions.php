@@ -45,7 +45,12 @@ function insert_categories(&$connection)
 function findAllCategories(&$connection)
 {
 
-	$query = "SELECT * FROM categories";
+	
+    $query = $connection->prepare("SELECT * FROM categories");
+    $query->bind_param("s",$fetch_all_categories);
+    $success = $query->execute(); 
+   
+    $query = "SELECT * FROM categories";
     $select_categories = mysqli_query($connection, $query);
     
     while($row = mysqli_fetch_assoc($select_categories) )
@@ -67,9 +72,14 @@ function deleteCategories(&$connection)
 	if( isset($_GET['delete']) )
 	{
 	    $delete_category_id = $_GET['delete'];
-	    $query = "DELETE FROM categories WHERE category_id = {$delete_category_id} ";
+	    $query = $connection->prepare("DELETE FROM categories WHERE 'category_id'=?");
+        $query->bind_param("is","$delete_category_id");
+        $success = $query->execute();
+        header("Location: categories.php");
+        /*
+        $query = "DELETE FROM categories WHERE category_id = {$delete_category_id} ";
 	    $delete_query = mysqli_query($connection,$query);
-	    header("Location: categories.php");
+	    header("Location: categories.php"); */
 	}
 }
 
